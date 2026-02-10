@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #283618;
+}
+
+.text-side{
+    color: #0d1b2a;
+    -webkit-text-stroke: 2px rgb(243, 243, 243);
+}
+.carrosel-principal{
+    height: 100%;
+}
+.carrosel-principal img {
+    height: 200px;
+    object-fit:cover;
+    filter: brightness(50%);
+}
+.carrosel-sobre-nos{
+    height: 100%;
+}
+#secao-sobre-nos{
+    background-color:#283618 ;
+    border-top-left-radius: 140px;
+    border-bottom-right-radius: 140px;
+    height: 100vh;
+}
+#secao-sobre-nos img{
+    width: 100px;
+}
