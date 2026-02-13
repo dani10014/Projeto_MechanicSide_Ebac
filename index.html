@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MechanicSide</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="./main.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#meuMenu" data-bs-root-margin="0px 0px -40%" tabindex="0">
     <header>
         <div class="container">
-            <nav class="navbar navbar-dark navbar-expand-lg p-3">
-                <a class="navbar-brand" href="#">Mechanic<span class="text-side">Side</span></a>
-                <button class="navbar-toggler navbar-expand-lg" type="button" data-bs-toggle="collapse" data-bs-target="#meuMenu">
+            <nav class="navbar navbar-expand-lg navbar-expand-md p-3 menu-principal">
+                <a class="navbar-brand text-light" href="#">Mechanic<span class="text-side">Side</span></a>
+                <button class="navbar-toggler navbar-expand-lg text-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#meuMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
             <div class="collapse navbar-collapse justify-content-end" id="meuMenu">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mt-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#secao-sobre-nos">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#secao-nossos-servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#secao-contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -28,7 +36,7 @@
         </div>
     </header>
     <main>
-            <section>
+            <section id="home">
                 <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner carrosel-principal">
                         <div class="carousel-item active">
@@ -61,14 +69,170 @@
                     <div class="d-flex justify-content-center">
                         <h5 class="mt-4 text-light border-bottom border-1 border-secondary h6">Sobre nós <i class="ms-1 fa-solid fa-circle-info"></i></h5>
                     </div>
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-center mt-3">
-                            <img src="./pexels-cottonbro-4480505.jpg" style="border-radius: 15px;" class="w-50" alt="Imagem sobre nós">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-10 text-center mt-3 ps-5 pe-5 pb-5 coluna-sobre-nos">
+                            <img src="./pexels-cottonbro-4480505.jpg" class="w-50 img-sobre-nos" alt="Imagem sobre nós">
+                            <div class="d-flex text-center align-items-center justify-content-center">
+                                <h5 class="border-bottom border-1 border-secondary mb-0 texto-mechanic-sobre-nos">Mechanic<span class="text-side-sobre-nos">Side</span></h5>
+                                <img src="./mecanico.gif" style="height: 50px; width: 50%; object-fit: scale-down;">
+                            </div>
+                            <p>Na MechanicSide, acreditamos que a mecânica vai além do reparo de peças; trata-se de garantir a segurança e a longevidade do seu patrimônio. Fundada com o objetivo de elevar o padrão de manutenção automotiva, nossa oficina une tecnologia de diagnóstico avançado a uma abordagem honesta sobre o que seu carro realmente precisa.</p>
+                            <button class="btn btn-primary">Saiba mais</button>
                         </div>
                 </div>
                 </div>
             </section>
+            <section id="secao-nossos-servicos">
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="mt-4 text-light border-bottom border-1 border-secondary h6 text-dark">Nossos serviços <i class="ms-1 fa-solid fa-gears"></i></h5>
+                    </div>
+                    <div id="carrosel-servicos" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carrosel-servicos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carrosel-servicos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carrosel-servicos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner carrosel-servicos">
+                            <div class="carousel-item active">
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-12 w-75">
+                                <div class="card text-white border-2 card-aberto">
+                                    <img src="./pexels-cottonbro-4489749.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Manutenção preventiva</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quibusdam repellat accusamus minima. Reiciendis modi enim ipsa quaerat repellat, doloremque alias</p>
+                                        <button class="btn btn-primary justify-content-center d-block mx-auto saiba-mais">Saiba mais</button>
+                                    </div>
+                                </div>
+                                <div class="card text-white card-fechado">
+                                    <img src="./Capo-carro-aberto.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Profissionais qualificados</h6>
+                                        <ul>
+                                            <li>Peças de qualidade</li>
+                                            <li>Equipe experiente</li>
+                                            <li>Garantia de qualidade</li>
+                                        </ul>
+                                        <button class="btn btn-secondary justify-content-center d-block mx-auto saiba-mais">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-12 w-75">
+                                <div class="card text-white card-aberto">
+                                    <img src="./pexels-cottonbro-4489749.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Profissionais qualificados</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quibusdam repellat accusamus minima. Reiciendis modi enim ipsa quaerat repellat, doloremque alias</p>
+                                        <button class="btn btn-primary justify-content-center d-block mx-auto saiba-mais">Saiba mais</button>
+                                    </div>
+                                </div>
+                                <div class="card text-white card-fechado">
+                                    <img src="./Capo-carro-aberto.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Profissionais qualificados</h6>
+                                        <ul>
+                                            <li>Peças de qualidade</li>
+                                            <li>Equipe experiente</li>
+                                            <li>Garantia de qualidade</li>
+                                        </ul>
+                                        <button class="btn btn-secondary justify-content-center d-block mx-auto saiba-mais">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row mt-5 justify-content-center">
+                            <div class="col-12 w-75">
+                                <div class="card text-white card-aberto">
+                                    <img src="./Capo-carro-aberto.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Profissionais qualificados</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quibusdam repellat accusamus minima. Reiciendis modi enim ipsa quaerat repellat, doloremque alias</p>
+                                        <button class="btn btn-primary justify-content-center d-block mx-auto saiba-mais">Saiba mais</button>
+                                    </div>
+                                </div>
+                            <div class="card text-white card-fechado">
+                                    <img src="./Capo-carro-aberto.jpg" class="card-img-top card-img-servico" alt="Capo-carro-aberto">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-center border-bottom border-2 border-secondary">Profissionais qualificados</h6>
+                                        <ul>
+                                            <li>Peças de qualidade</li>
+                                            <li>Equipe experiente</li>
+                                            <li>Garantia de qualidade</li>
+                                        </ul>
+                                        <button class="btn btn-secondary justify-content-center d-block mx-auto saiba-mais">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrosel-servicos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrosel-servicos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                    </div>
+                </div>
+            </section>
+            <section id="secao-contato">
+                <div class="container">
+                    <div class="d-flex justify-content-center mb-4 mt-4">
+                        <h6 class="h6 border-bottom border-2 border-secondary text-light">Contato<i class="ms-1 fa-solid fa-phone"></i>
+                        </h6>
+                    </div>
+                    <div class="row container-contato m-3 p-2">
+                        <div class="col-6">
+                            <form class="mb-3">
+                                <div class="mb-1">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                                </div>
+                                <div class="mb-1">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mt-2">Enviar</button>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="h6">Endereço</h6>
+                            <p>Rua Exemplo, 123 - Bairro, Cidade - Estado</p>
+                            <h6 class="h6">Telefone</h6>
+                            <p>(11) 1234-5678</p>
+                            <h6 class="h6">Email</h6>
+                            <p>contato@mechanicside</p>
+                            <h6 class="h6">Redes</h6>
+                            <ul class="d-flex list-unstyled w-100 gap-4">
+                                <li>
+                                    <i class="fab fa-facebook-f"></i>
+                                </li>
+                                <li>
+                                    <i class="fab fa-instagram"></i>
+                                </li>
+                                <li>
+                                    <i class="fab fa-twitter"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
 </html>

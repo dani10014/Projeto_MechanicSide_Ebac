@@ -3,13 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-padding-top: 100px; /* Compensa a altura do header fixo ao clicar no menu */
+    scroll-behavior: smooth;
+}
 header{
     background-color: #283618;
+    border-bottom: #ffffff96 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    color: white; 
+    background-color: #0a0908;
+}
 .text-side{
     color: #0d1b2a;
     -webkit-text-stroke: 2px rgb(243, 243, 243);
+}
+.text-side-sobre-nos{
+    color: #283618;
+    -webkit-text-stroke: 2px black
+}
+.texto-mechanic-sobre-nos{
+    width: 50%;
+}
+.nav-link:hover,
+.nav-link.active { /* Aplica o mesmo estilo de hover quando o item estiver ativo */
+    background-color: #fff;
+    color:#000000;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.menu-principal .nav-link{
+    color: #fff;
+}
+nav{
+    color: #fff;
 }
 .carrosel-principal{
     height: 100%;
@@ -24,10 +59,88 @@ header{
 }
 #secao-sobre-nos{
     background-color:#283618 ;
-    border-top-left-radius: 140px;
-    border-bottom-right-radius: 140px;
-    height: 100vh;
 }
 #secao-sobre-nos img{
     width: 100px;
+}
+.img-sobre-nos {
+    border-radius: 15px;
+}
+.coluna-sobre-nos{
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 5px 15px black;
+    padding-top:20px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.coluna-sobre-nos button:hover{
+    background-color: #0d1b2a;
+}
+#secao-nossos-servicos{
+    background-color: #fffffe;
+    padding-bottom: 50px;
+}
+#secao-nossos-servicos .card{
+    max-height: 100%;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
+    background-color: #283618;
+    box-shadow: 0px 5px 15px black;
+}
+.card-img-servico {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Configuração para o efeito 3D no container pai */
+.carrosel-servicos .col-12 {
+    perspective: 1000px; /* Dá a profundidade 3D */
+    position: relative;
+}
+
+/* Estilos comuns para ambos os cards para permitir o giro */
+.carrosel-servicos .card {
+    backface-visibility: hidden; /* Esconde a parte de trás do elemento ao girar */
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave com leve balanço */
+    transform-style: preserve-3d;
+}
+
+/* O card aberto é a "frente" */
+.card-aberto {
+    transform: rotateY(0deg);
+    position: relative; /* Mantém a altura do container */
+    z-index: 2;
+}
+
+/* O card fechado é o "verso", começa girado */
+.card-fechado{
+    display: block; /* Garante que ele existe, mas está virado */
+    transform: rotateY(180deg);
+    position: absolute; /* Fica exatamente em cima do outro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Quando o container tiver a classe .virado */
+.col-12.virado .card-aberto {
+    transform: rotateY(-180deg);
+}
+
+.col-12.virado .card-fechado {
+    transform: rotateY(0deg);
+    z-index: 3; /* Traz para frente */
+}
+.container-contato{
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+}
+@media screen and (min-width: 768px) {
+    
 }
