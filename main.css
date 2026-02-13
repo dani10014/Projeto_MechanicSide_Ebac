@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html {
-    scroll-padding-top: 100px; /* Compensa a altura do header fixo ao clicar no menu */
+    scroll-padding-top: 100px;
     scroll-behavior: smooth;
 }
 header{
@@ -34,7 +34,7 @@ body {
     width: 50%;
 }
 .nav-link:hover,
-.nav-link.active { /* Aplica o mesmo estilo de hover quando o item estiver ativo */
+.nav-link.active { 
     background-color: #fff;
     color:#000000;
     border-radius: 5px;
@@ -93,45 +93,38 @@ nav{
     object-fit: cover;
 }
 
-/* Configuração para o efeito 3D no container pai */
+
 .carrosel-servicos .col-12 {
-    perspective: 1000px; /* Dá a profundidade 3D */
+    perspective: 1000px;
     position: relative;
 }
-
-/* Estilos comuns para ambos os cards para permitir o giro */
 .carrosel-servicos .card {
-    backface-visibility: hidden; /* Esconde a parte de trás do elemento ao girar */
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave com leve balanço */
+    backface-visibility: hidden;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
 }
-
-/* O card aberto é a "frente" */
 .card-aberto {
     transform: rotateY(0deg);
-    position: relative; /* Mantém a altura do container */
+    position: relative;
     z-index: 2;
 }
-
-/* O card fechado é o "verso", começa girado */
 .card-fechado{
-    display: block; /* Garante que ele existe, mas está virado */
+    display: block;
     transform: rotateY(180deg);
-    position: absolute; /* Fica exatamente em cima do outro */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
-/* Quando o container tiver a classe .virado */
 .col-12.virado .card-aberto {
     transform: rotateY(-180deg);
 }
 
 .col-12.virado .card-fechado {
     transform: rotateY(0deg);
-    z-index: 3; /* Traz para frente */
+    z-index: 3;
 }
 .container-contato{
     background-color: rgba(255, 255, 255, 0.3); 
